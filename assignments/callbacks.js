@@ -82,21 +82,33 @@ console.log(multiplyNums(5,10, multiplies =>` multiplies two numbers is ${multip
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  let count = 0;
   item.forEach(
+    
     function(currentItem){
-      if(currentItem === list.forEach(function(currentlist){ return currentlist;})){
-      return cb('true');
+      
+      if(currentItem === list){
+     
+        count++; 
       }
-      else { return cb('false'); }
+      
     }
+  )
+    if (count == 0){
+      return cb('false')
+    }
+    else{ return cb('true')}
 
-  ) //item.forEach(
+}
 
-}// function contains(item, list, cb)
 
-let testlist = ['Notebook','apple','banana'];
-console.log(contains(items,testlist, contain =>` ans. is ${contain}.`));
+let book = 'Notebook';
 
+let printAns = function(a) {
+  return console.log(a);
+}
+
+contains(items,book,printAns);
 
 
 
