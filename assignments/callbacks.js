@@ -1,4 +1,7 @@
-// Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
+// Create a higher order function and invoke the callback function to test your work. 
+//You have been provided an example of a problem and a 
+//solution to see how this works with our items array.
+//  Study both the problem and the solution to figure out the rest of the problems.
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
@@ -41,24 +44,65 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(arr.length);
+    
 }
+
+console.log(getLength(items, length =>`the length of the array is ${length}.`));
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr[arr.length-1])
 }
+console.log(last(items, last =>`the last item of the array is ${last}.`));
+
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x+y);
 }
+console.log(sumNums(5,10, sum =>` adds two numbers (x, y) is ${sum}.`));
+
+
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x*y);
 }
+console.log(multiplyNums(5,10, multiplies =>` multiplies two numbers is ${multiplies}.`));
+
+
+
+
+
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+  item.forEach(
+    function(currentItem){
+      if(currentItem === list.forEach(function(currentlist){ return currentlist;})){
+      return cb('true');
+      }
+      else { return cb('false'); }
+    }
+
+  ) //item.forEach(
+
+}// function contains(item, list, cb)
+
+let testlist = ['Notebook','apple','banana'];
+console.log(contains(items,testlist, contain =>` ans. is ${contain}.`));
+
+
+
+
+
+
+
 
 /* STRETCH PROBLEM */
 
