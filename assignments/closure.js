@@ -5,6 +5,18 @@
 // The outer scope can be a parent function, or the top level of the script.
 
 
+function tseting(){
+    let a = 3;
+
+    function level2(){
+       let b = 4;
+       let c = b + a;
+    }
+}
+
+
+
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
